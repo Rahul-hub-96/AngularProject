@@ -1,0 +1,10 @@
+{
+    "user":[{
+    "email": "yash@gmail.com",
+    "password":"pass",
+    "role":"Admin"
+},{
+    "email": "yash@g.com",
+    "password":"pass",
+    "role":"User"   
+}]}

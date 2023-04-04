@@ -1,0 +1,26 @@
+app-header{
+    position: fixed;
+    width: 100%;
+   z-index: 2;
+   height: 4rem;
+
+}
+ main{
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+   z-index: 1;
+}
+.black-border
+{
+    border: 1px solid black;
+}
+app-sidebar{
+    width: 250px;
+    left: 0rem;
+    position: absolute;
+    height: calc(100vh-4rem);
+    box-shadow:0px 0px 10px black ;
+    background-color: black;
+    border-top: 1px solid white;
+}
