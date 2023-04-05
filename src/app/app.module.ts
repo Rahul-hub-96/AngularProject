@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     HomeComponent,
     SidebarComponent,
+  
     
   ],
   imports: [
