@@ -1,0 +1,15 @@
+{
+  "getSupplierData": [
+    {
+      "name": "Gada Electronics",
+      "contactname": "Jethalal champaklal gada",
+      "email": "jethalalGada_gada_Electronics@gmail.com",
+      "phone": 9876543211,
+      "address": "gokuldham society,goregaon east,mumbai",
+      "mode": "cheque",
+      "prefer": "heplicopter",
+      "id": 1,
+      "editing": true
+    }
+  ]
+}

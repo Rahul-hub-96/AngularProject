@@ -1,0 +1,105 @@
+<form [formGroup]="supplierForm" (ngSubmit)="submit()">
+    <h1>Supplier Registration</h1>
+    <label>
+      Name:
+      <input type="text" formControlName="name" required>
+      <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['name'].errors?.['required']">
+        <span>Supplier name is required</span>
+    </div>
+    </label>
+  
+    <label>
+      Contact Name:
+      <input type="text" formControlName="contactname" required>
+      <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['contactname'].errors?.['required']">
+        <span>Supplier contact name is required</span>
+    </div>
+    </label>
+  
+    <label>
+      Email:
+      <input type="text" formControlName="email" required>
+      <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['email'].errors?.['required']">
+        <span>Email is required</span>
+    </div>
+    </label>
+  
+    <label>
+      Phone No.:
+      <input type="number" formControlName="phone" required>
+      <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['phone'].errors?.['required']">
+        <span>Phone Number is required</span>
+    </div>
+    </label>
+
+    <label>
+        Address:
+        <input type="test" formControlName="address" required>
+        <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['address'].errors?.['required']">
+          <span>Address is required</span>
+      </div>
+      </label>
+  
+    <label>
+      Payment Mode:
+      <input type="text" formControlName="mode" required>
+      <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['mode'].errors?.['required']">
+        <span>Payment Mode is required</span>
+    </div>
+    </label>
+  
+    <label>
+        Delivery Preferences:
+      <input type="text" formControlName="prefer" required>
+      <div style="color:red; margin-top: 5px;" *ngIf="supplierForm.controls['prefer'].errors?.['required']">
+        <span>Delivery Preferences is required</span>
+    </div>
+    </label>
+  
+    <button class="btn-2" type="submit"><span>Register Product</span></button>
+  
+  </form>
+  
+  <br>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Contact Name</th>
+      <th>Email</th>
+      <th>Phone No.</th>
+      <th>Address</th>
+      <th>Payment Mode</th>
+      <th>Delivery Preferences</th>
+      <th>Data Operations</th>
+    </tr>
+
+    <tr *ngFor="let s of supser">
+      <td>
+        <input type="text" [(ngModel)]="s.name" name="name" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="s.contactname" name="contactname" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="s.email" name="email" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="s.phone" name="phone" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="s.address" name="address" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="s.mode" name="mode" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="s.prefer" name="prefer" [disabled]="!s.editing" />
+      </td>
+      <td>
+        <button (click)="editSupplier(s)">Edit</button>
+        <button (click)="updateSupplier(s)">Update</button>
+        <button (click)="deleteSupplier(s)">Delete</button>
+      </td>
+    </tr>
+  
+  </table>

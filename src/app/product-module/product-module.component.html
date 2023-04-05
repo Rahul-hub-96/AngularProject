@@ -1,0 +1,116 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <h1>Product Registration</h1>
+  <label>
+    Name:
+    <input type="text" formControlName="name" required>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['name'].errors?.['required']">
+      <span>Product name is required</span>
+  </div>
+  </label>
+
+  <label>
+    Description:
+    <input type="text" formControlName="description" required>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['description'].errors?.['required']">
+      <span>Product Description is required</span>
+  </div>
+  </label>
+
+  <label>
+    Price:
+    <input type="number" formControlName="price" required>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['price'].errors?.['required']">
+      <span>Product Price is required</span>
+  </div>
+  </label>
+
+  <label>
+    Quantity:
+    <input type="number" formControlName="quantity" required>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['quantity'].errors?.['required']">
+      <span>Product Quantity is required</span>
+  </div>
+  </label>
+
+  <label>
+    Category:
+    <select formControlName="category" required>
+      <option value="">-- Select a category --</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+      <option value="Home & Kitchen">Home & Kitchen</option>
+      <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+      <option value="Toys & games">Toys & games</option>
+      <option value="Health, Household & Baby Care">Health, Household & Baby Care</option>
+      <option value="Sports & outdoors">Sports & outdoors</option>
+    </select>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['category'].errors?.['required']">
+      <span>Product Category is required</span>
+  </div>
+  </label>
+
+  <label>
+    Manufacturer:
+    <input type="text" formControlName="manufacturer" required>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['manufacturer'].errors?.['required']">
+      <span>Product Manufacturer is required</span>
+  </div>
+  </label>
+
+  <label>
+    Image URL:
+    <input type="text" formControlName="image" required>
+    <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['image'].errors?.['required']">
+      <span>Product Image URL is required</span>
+  </div>
+  </label>
+
+  <button class="btn-2" type="submit"><span>Register Product</span></button>
+
+</form>
+
+<br>
+<button style="height: 40px;" (click)="ProductReport()">Generate Report</button>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Category</th>
+    <th>Manufacturer</th>
+    <th>Image URL</th>
+    <th>Data Operations</th>
+  </tr>
+
+  
+  <tr *ngFor="let p of prodser">
+    <td>
+      <input type="text" [(ngModel)]="p.name" name="name" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="p.description" name="desc" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="p.price" name="price" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="p.quantity" name="quant" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="p.category" name="categ" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="p.manufacturer" name="manf" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="p.image" name="img" [disabled]="!p.editing" />
+    </td>
+    <td>
+      <button (click)="editProduct(p)">Edit</button>
+      <button (click)="updateProduct(p)">Update</button>
+      <button (click)="deleteProduct(p)">Delete</button>
+    </td>
+  </tr>
+
+</table>

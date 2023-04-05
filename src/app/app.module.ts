@@ -12,6 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { ProductModuleComponent } from './product-module/product-module.component';
+import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
+import { ProductServiceService } from './services/product-service.service';
+
 
 
 @NgModule({
@@ -23,7 +27,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     HomeComponent,
     SidebarComponent,
-  
+	ProductModuleComponent,
+    SupplierModuleComponent
     
   ],
   imports: [
