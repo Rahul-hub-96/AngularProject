@@ -1,0 +1,28 @@
+.main {
+    /* background-color: rgb(138, 235, 242); */
+    /* padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%; */
+    /* margin: ; */
+    /* margin: 10% auto; */
+    /* 
+    padding-top: 2%; */
+    /* width: 100%; 
+    padding: 5%;
+    margin-left: 100px; */
+    width: 89%;
+    padding-top: 69px;
+    padding-left: 80px;
+    margin-left: 130px;
+}
+
+.table {
+    color: white;
+    width: 100%;
+    padding:2%
+}
+
+.h2 {
+    color :red;
+    text-align: center;
+}

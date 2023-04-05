@@ -15,6 +15,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductModuleComponent } from './product-module/product-module.component';
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
 import { ProductServiceService } from './services/product-service.service';
+import { OrderModuleComponent } from './order-module/order-module.component';
 
 
 
@@ -28,7 +29,8 @@ import { ProductServiceService } from './services/product-service.service';
     HomeComponent,
     SidebarComponent,
 	ProductModuleComponent,
-    SupplierModuleComponent
+    SupplierModuleComponent,
+    OrderModuleComponent
     
   ],
   imports: [
