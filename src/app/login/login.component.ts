@@ -11,32 +11,41 @@ import { LoginserviceService } from '../loginservice.service';
 })
 export class LoginComponent {
   loginForm!:FormGroup;
+  usertype:any;
   constructor(private formBuilder:FormBuilder,private http:HttpClient,private router:Router,
     private cs:LoginserviceService){
 
   }
 ngOnInit(){
+  
 this.loginForm=this.formBuilder.group({
   email:[''],
-  password:['']
+  password:[''],
+  
 })
 }
 logIn(){
 this.cs.logIn().subscribe(res=>{
   const user=res.find((a:any)=>{
-    return  a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
+    return  a.email===this.loginForm.value.email && a.password1===this.loginForm.value.password &&a.usertype
     
   })
   
-  if(user && user.role==="Admin"){
+  if(user && user.usertype=="Admin"){
     alert("Successfully Login");
     this.loginForm.reset();
-    this.router.navigate(['/home']);
+    this.router.navigateByUrl("admin/ ");
     
     
   
-  }else{
+  }else if(user && user.usertype=="Other"){
+    alert("Successfully Login");
+    this.loginForm.reset();
+    this.router.navigateByUrl("/user");
+  }
+  else{
     alert("User Not Found");
+    this.loginForm.reset();
   }
 },err=>{
   alert("Something Went Wrong");

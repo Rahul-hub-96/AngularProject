@@ -15,6 +15,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductModuleComponent } from './product-module/product-module.component';
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
 import { ProductServiceService } from './services/product-service.service';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { WelcomeAdminComponent } from './welcome-admin/welcome-admin.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
 
 
 
@@ -22,13 +26,16 @@ import { ProductServiceService } from './services/product-service.service';
   declarations: [
     AppComponent,
     LoginComponent,
-  
+  RegistrationPageComponent,
    
     HeaderComponent,
     HomeComponent,
     SidebarComponent,
 	ProductModuleComponent,
-    SupplierModuleComponent
+    SupplierModuleComponent,
+    AdminDashboardComponent,
+    WelcomeAdminComponent,
+    WelcomeUserComponent
     
   ],
   imports: [

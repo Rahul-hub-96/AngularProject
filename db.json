@@ -44,5 +44,39 @@
       "image": "Raymond.com",
       "id": 5
     }
+  ],"getUserData": [
+    {
+      "username": "Devdatta Chilwant",
+      "email": "devdatta.chilwant@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Admin",
+      "id": 1
+    },
+    {
+      "username": "Vinay",
+      "email": "vs@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Admin",
+      "id": 2
+    },
+    {
+      "username": "Chilwant",
+      "email": "chilwant@gmail.com",
+      "password1": "31",
+      "password2": "31",
+      "usertype": "Other",
+      "id": 3
+    },
+    {
+      "username": "Chilwant Devdatta",
+      "email": "chilwant@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Other",
+      "id": 4
+    }
   ]
+
 }
