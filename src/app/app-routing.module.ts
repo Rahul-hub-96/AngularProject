@@ -8,6 +8,7 @@ import { ProductModuleComponent } from './product-module/product-module.componen
 import { Supplier } from './productforms/Supplier';
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
 import { OrderModuleComponent } from './order-module/order-module.component';
+import { PlaceorderModuleComponent } from './placeorder-module/placeorder-module.component';
 
 const routes: Routes = [
 {
@@ -33,6 +34,10 @@ const routes: Routes = [
 {
   path:"order",
   component:OrderModuleComponent
+},
+{
+  path:"placeOrder",
+  component:PlaceorderModuleComponent
 }
 
 ];

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OrderserviceService } from '../orderservice.service';
 import { OrderDetails } from './model/OrderDetails';
+import { PlaceorderserviceService } from '../placeorderservice.service';
 
 @Component({
   selector: 'app-order-module',
@@ -10,15 +11,17 @@ import { OrderDetails } from './model/OrderDetails';
 export class OrderModuleComponent {
 
   orderData!:OrderDetails[];
-  constructor(private orderservice:OrderserviceService){}
+  orderDatas:OrderDetails[]=[];
+  constructor(private orderservice:OrderserviceService, private placeOrderService:PlaceorderserviceService){}
 
   ngOnInit():void{
     this.showOrderDetails();
   }
 
   showOrderDetails(){
-    this.orderservice.showOrderDetails().subscribe(list => {
-      this.orderData=list;
+    this.orderservice.getOrderHistory().subscribe(list => {
+      this.orderData =list;
+      console.log(this.orderData);
     });
   }
 }

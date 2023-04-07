@@ -1,0 +1,67 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<app-sidebar></app-sidebar>
+<div class="main" [formGroup]="placeOrderForm" (ngSubmit)="placeOrder()">
+    
+    <table id="myTable" class=" table order-list"  formArrayName="placeOrdDetails">
+    <thead>
+        <tr>
+            <td>Product Categoy</td>
+            <td>Product Name</td>
+            <td>Quantity</td>
+            <td>Amount</td>
+            <td>Total Amount</td>
+            <th width="150px"><button type="button" (click)="addMoreRow()" class="btn btn-primary">Add More</button></th>
+        </tr>
+    </thead>
+    <!-- <form >  placeOrderForm.controls['placeOrdDetails']?.value-->
+    <tbody>
+        <tr  *ngFor="let plcOrder of getFormArray().controls;let i = index;" [formGroupName]="i">
+            <td class="col-sm-2"> 
+                <!--  -->
+                <select name="selectedQuantity" formControlName="category" class="form-control" #cat  (change)="getProductByCategory(cat.value, i)">
+                        <option value="" disabled selected>Select Category</option>
+                        <option *ngFor="let category of products" [value]="category.category" >{{category.category}}</option>
+                    </select>
+                </td>
+                <!-- #name (change)="getProductByName(name.value,i)" -->
+                <td class="col-sm-2">
+                    <select name="selectedQuantity" formControlName="pname" class="form-control" #name (change)="getProductDetaisByName(name.value,i)">
+                            <option value="" disabled selected>Select Product Name</option>
+                            <option *ngFor="let pname of getProductByName(i)" [value]="pname.id" >{{pname.name}}</option>
+                        </select>
+                    </td>
+            <td class="col-sm-2">
+                <input type="text" formControlName="quantity" class="form-control" #quant (ngModelChange)="quantity(quant.value, i)"
+                [max]="1000" (ngModelChange)="maxQuan($event,i)" [min]="1" pattern="^[1-9][0-9]*$" required oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value='';" />
+            </td>
+            <td class="col-sm-2">
+                <input  type="text" formControlName="price" name="price" class="form-control" [readonly] = "disableSelect"/>
+            </td>
+            <td class="col-sm-2">
+                <input type="text" formControlName="totalAmount" name="totalAmount" class="form-control" [readonly] = "disableSelect"/>
+            </td>
+
+            <!-- <td>    
+                <input type="button"  (click)="addRow()" id="addrow" value="Add Row" />    
+              </td>  -->
+            <td (click)="deleteRow(i)">    
+                <i class="fa fa-trash fa-2x"></i>    
+              </td>  
+             
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" style="text-align: left;">
+                <input type="button" class="btn btn-lg btn-block " (click)="placeOrder()" value="Place Order" />
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </tfoot>
+<!-- </form> -->
+</table>
+</div>

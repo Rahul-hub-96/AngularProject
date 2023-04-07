@@ -1,8 +1,13 @@
 export class OrderDetails {
     "id": number;
+    "ordernumber":number;
     "productId":number;
-    "noOfProduct":number;
-    "amount":number;
+    "quantity":number;
+    "price":number;
+    "totalPrice":number;
+    "availableQuantity":number;
+    "customer":string;
     "status":string;
-    "ordernum":number;
+    "category":string;
+    "pname":string;
 }

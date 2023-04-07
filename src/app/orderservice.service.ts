@@ -10,7 +10,7 @@ export class OrderserviceService {
   constructor(private http:HttpClient) { }
   url="http://localhost:3000"
 
-  showOrderDetails(){
-    return this.http.get<OrderDetails[]>(this.url+"/showOrderDetails");
+  getOrderHistory(){
+    return this.http.get<OrderDetails[]>(this.url+"/getOrderHistory");
   }
 }

@@ -14,8 +14,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { ProductModuleComponent } from './product-module/product-module.component';
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
-import { ProductServiceService } from './services/product-service.service';
 import { OrderModuleComponent } from './order-module/order-module.component';
+import { PlaceorderModuleComponent } from './placeorder-module/placeorder-module.component';
+import { FilterPipe } from './placeorder-module/filter.pipe';
 
 
 
@@ -30,7 +31,10 @@ import { OrderModuleComponent } from './order-module/order-module.component';
     SidebarComponent,
 	ProductModuleComponent,
     SupplierModuleComponent,
-    OrderModuleComponent
+    OrderModuleComponent,
+    PlaceorderModuleComponent,
+    FilterPipe
+
     
   ],
   imports: [
