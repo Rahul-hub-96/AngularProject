@@ -3,7 +3,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    background-color: #e9f6bc;
+    background-color: rgb(179, 243, 223) !important;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgb(23, 19, 19);
   }
@@ -60,5 +60,13 @@ form {
   td:last-child {
     text-align: center;
   }
-  
+  .card{
+    margin-top: 2px;
+   
+    padding: 45px;
+    left: 30%;
+    top:15%;
+    position: absolute;
+    width: 550px;
+}
   

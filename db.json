@@ -27,7 +27,7 @@
       "name": "RamSung TV",
       "description": "TV",
       "price": 40000,
-      "quantity": "5000",
+      "quantity": 87,
       "category": "electronics",
       "manufacturer": "Gada Electronics",
       "image": "www.Gada_Electronics.com",
@@ -38,11 +38,45 @@
       "name": "Raymond suit",
       "description": "suit",
       "price": 15000,
-      "quantity": 1,
+      "quantity": 10000,
       "category": "clothing",
       "manufacturer": "Raymond",
       "image": "Raymond.com",
       "id": 5
+    }
+  ],
+  "getUserData": [
+    {
+      "username": "Devdatta Chilwant",
+      "email": "devdatta.chilwant@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Admin",
+      "id": 1
+    },
+    {
+      "username": "Vinay",
+      "email": "vs@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Admin",
+      "id": 2
+    },
+    {
+      "username": "Chilwant",
+      "email": "chilwant@gmail.com",
+      "password1": "31",
+      "password2": "31",
+      "usertype": "Other",
+      "id": 3
+    },
+    {
+      "username": "Chilwant Devdatta",
+      "email": "chilwant@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Other",
+      "id": 4
     }
   ],
   "showOrderDetails": [
@@ -104,19 +138,22 @@
     }
   ],
   "getOrderHistory": [
-    [
-      {
-        "id": 1,
-        "ordernumber": 30,
-        "productId": "3",
-        "customer": "rahul",
-        "category": "Electronics",
-        "pname": "3",
-        "price": "50000",
-        "quantity": "3",
-        "totalAmount": 150000,
-        "availableQuantity": 9997
-      }
-    ]
+    {
+      "placeOrdDetails": [
+        {
+          "id": 1,
+          "ordernumber": 40,
+          "productId": "4",
+          "category": "electronics",
+          "pname": "4",
+          "price": 40000,
+          "quantity": 1,
+          "totalAmount": 0,
+          "availableQuantity": 88,
+          "status": "pending"
+        }
+      ],
+      "id": 1
+    }
   ]
 }

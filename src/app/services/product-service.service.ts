@@ -29,4 +29,8 @@ export class ProductServiceService {
   delete(prod:Product): Observable<any> {
     return this.http.delete<any>("http://localhost:3000/getProductData/"+prod.id);
   }
+
+  updateProducts(prod: Product): Observable<Product> {
+    return this.http.patch<Product>(this.url+"/getProductData/"+prod.id, prod);
+  }
 }

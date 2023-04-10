@@ -10,19 +10,35 @@
     /* width: 100%; 
     padding: 5%;
     margin-left: 100px; */
-    width: 89%;
-    padding-top: 69px;
-    padding-left: 80px;
-    margin-left: 130px;
+    width: 100%;
+    padding-top: 75px;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .table {
-    color: white;
+    color: #0a443d;
     width: 100%;
     padding:2%
 }
 
 .h2 {
-    color :red;
-    text-align: center;
+    color :#0a443d;
+    /* text-align: center; */
+    float: left;
 }
+
+.mr-0 {
+    margin-right: 0;
+  }
+  .ml-auto {
+    margin-left:auto;
+  }
+  .d-block {
+    display:block;
+  }
+
+  .nod{
+    color:red;text-align:center;font-weight: 700;
+    padding-left:450px
+  }
