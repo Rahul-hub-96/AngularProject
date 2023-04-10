@@ -11,6 +11,10 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { WelcomeAdminComponent } from './welcome-admin/welcome-admin.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
+import { ViewProductComponent } from './view-product/view-product.component';
+import { OrderComponent } from './order/order.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { PlaceorderModuleComponent } from './placeorder-module/placeorder-module.component';
 
 const routes: Routes = [
   {
@@ -39,6 +43,21 @@ const routes: Routes = [
     component:RegistrationPageComponent
   },
   {
+
+     path:"order/:type",
+    
+     component:OrderComponent
+    
+    },
+    
+    {
+    
+     path:"placeOrder",
+    
+     component:PlaceorderModuleComponent
+    
+    },
+  {
     path: "admin",
     component: AdminDashboardComponent,
     children: [{
@@ -51,9 +70,33 @@ const routes: Routes = [
       component: ProductModuleComponent
     },
     {
+      path: "getproduct",
+      component: ViewProductComponent
+    },
+  
+    {
       path: "supplier",
       component: SupplierModuleComponent
-    }
+    },
+    {
+      path: "updateprod/:pid",
+      component:UpdateProductComponent
+    },{
+
+       path:"order/:type",
+      
+       component:OrderComponent
+      
+      },
+      
+      {
+      
+       path:"placeOrder",
+      
+       component:PlaceorderModuleComponent
+      
+      }
+   
     ]
   }
 ];

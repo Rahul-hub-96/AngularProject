@@ -1,0 +1,44 @@
+.main {
+    /* width: 100%;
+    padding-top: 45px;
+    margin-left: 200px; */
+
+    /* width: 100%;
+     */
+     width: 100%;
+     padding-top: 75px;
+     padding-left: 0;
+     margin-left: 0;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+.action_btn {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-left: 7px;
+    margin-top: -12px;
+    padding-top: 0px;
+}
+
+.table {
+    color: #0a443d;
+    width: 100%;
+    padding:2%
+}
+
+.btn {
+    font-weight: bold;
+    color: currentcolor;
+    background-color: #B3F3DF; 
+    float: right;
+    margin-right:10px;
+}
+        

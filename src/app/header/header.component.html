@@ -4,8 +4,11 @@
 
 <a class="navbar-brand px-4">Inventory</a>
 
-<a href="/login" style="margin-left: 70%;color: rgb(10, 10, 10);"><i class="fa-solid fa-bars"></i>&nbsp;Log In</a>
-<a *ngIf="isLoggedIn">Log Out</a>
+
+
+<a  [routerLink]="['/login']" style="margin-left: 70%;color: rgb(10, 10, 10);"><span class="fa fa-user"></span>&nbsp;Log In</a>
+
+
    
 
 

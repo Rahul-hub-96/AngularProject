@@ -7,19 +7,15 @@ import { LoginserviceService } from '../loginservice.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-isLoggedIn=false;
-  user: any;
+  isLoggedIn = false;
+  user:any;
 constructor(private login:LoginserviceService){
 
 }
-ngOnInit(){
-  this.isLoggedIn = this.login.isLoggedIn();
+ngOnInit(): void {
   
-  this.login.subscribe((data:any) => {
-    this.isLoggedIn = this.login.isLoggedIn();
-    this.user = this.login.getUser();
-    console.log("user"+this.user);
-  });
 }
+
+
 }
 

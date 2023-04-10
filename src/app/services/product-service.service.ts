@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductServiceService {
+ 
 
   constructor(public http:HttpClient) { }
   url:String="http://localhost:3000"
@@ -20,7 +21,9 @@ export class ProductServiceService {
   {
     return this.http.get<Product[]>(this.url+"/getProductData");
   }
-  
+  getById(pid:number) {
+    return this.http.get<Product>(this.url+"/getProductData/"+pid);
+  }
   updateProduct(prod: Product): Observable<Product> {
     return this.http.put<Product>(this.url+"/getProductData/"+prod.id, prod);
   }
@@ -29,4 +32,10 @@ export class ProductServiceService {
   delete(prod:Product): Observable<any> {
     return this.http.delete<any>("http://localhost:3000/getProductData/"+prod.id);
   }
+  updateProducts(prod: Product): Observable<Product> {
+
+    return this.http.patch<Product>(this.url+"/getProductData/"+prod.id, prod);
+    
+  }
+
 }

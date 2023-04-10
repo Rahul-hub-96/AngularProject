@@ -19,6 +19,10 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { WelcomeAdminComponent } from './welcome-admin/welcome-admin.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
+import { ViewProductComponent } from './view-product/view-product.component';
+import { OrderComponent } from './order/order.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { PlaceorderModuleComponent } from './placeorder-module/placeorder-module.component';
 
 
 
@@ -35,7 +39,11 @@ import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
     SupplierModuleComponent,
     AdminDashboardComponent,
     WelcomeAdminComponent,
-    WelcomeUserComponent
+    WelcomeUserComponent,
+    ViewProductComponent,
+    OrderComponent,
+    UpdateProductComponent,
+    PlaceorderModuleComponent
     
   ],
   imports: [

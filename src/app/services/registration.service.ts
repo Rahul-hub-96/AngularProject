@@ -17,6 +17,7 @@ export class RegistrationService {
      return this.http.post<UserRegistrationForm>(this.url + "/getUserData", usr);
    
   }
+ 
 }
 
 
