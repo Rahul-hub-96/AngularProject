@@ -16,7 +16,6 @@ import { ProductModuleComponent } from './product-module/product-module.componen
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
 import { OrderModuleComponent } from './order-module/order-module.component';
 import { PlaceorderModuleComponent } from './placeorder-module/placeorder-module.component';
-import { FilterPipe } from './placeorder-module/filter.pipe';
 import { ProductServiceService } from './services/product-service.service';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { WelcomeAdminComponent } from './welcome-admin/welcome-admin.component';
@@ -39,7 +38,6 @@ import { DummyFormsComponent } from './dummy-forms/dummy-forms.component';
     SupplierModuleComponent,
     OrderModuleComponent,
     PlaceorderModuleComponent,
-    FilterPipe,
     AdminDashboardComponent,
     WelcomeAdminComponent,
     WelcomeUserComponent,

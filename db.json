@@ -27,7 +27,7 @@
       "name": "RamSung TV",
       "description": "TV",
       "price": 40000,
-      "quantity": 87,
+      "quantity": 83,
       "category": "electronics",
       "manufacturer": "Gada Electronics",
       "image": "www.Gada_Electronics.com",
@@ -154,6 +154,78 @@
         }
       ],
       "id": 1
+    },
+    {
+      "placeOrdDetails": [
+        {
+          "id": 1,
+          "ordernumber": 40,
+          "productId": "4",
+          "customer": 0,
+          "category": "electronics",
+          "pname": "4",
+          "price": 40000,
+          "quantity": 1,
+          "totalAmount": 40000,
+          "availableQuantity": 87,
+          "status": "pending"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "placeOrdDetails": [
+        {
+          "id": 1,
+          "ordernumber": 40,
+          "productId": "4",
+          "customer": 0,
+          "category": "electronics",
+          "pname": "4",
+          "price": 40000,
+          "quantity": 1,
+          "totalAmount": 40000,
+          "availableQuantity": 86,
+          "status": "pending"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "placeOrdDetails": [
+        {
+          "id": 1,
+          "ordernumber": 40,
+          "productId": "4",
+          "customer": 4,
+          "category": "electronics",
+          "pname": "4",
+          "price": 40000,
+          "quantity": 1,
+          "totalAmount": 40000,
+          "availableQuantity": 85,
+          "status": "pending"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "placeOrdDetails": [
+        {
+          "id": 1,
+          "ordernumber": 40,
+          "productId": "4",
+          "customer": 4,
+          "category": "electronics",
+          "pname": "4",
+          "price": 40000,
+          "quantity": 1,
+          "totalAmount": 40000,
+          "availableQuantity": 84,
+          "status": "pending"
+        }
+      ],
+      "id": 5
     }
   ]
 }

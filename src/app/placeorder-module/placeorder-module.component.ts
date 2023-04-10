@@ -95,7 +95,10 @@ export class PlaceorderModuleComponent {
   getProductDetaisByName(id: string, index: number) {
     let price = this.products.filter(pro => pro.id == parseInt(id)).map(pri => pri.price);
     let availableQuantity = this.products.filter(pro => pro.id == parseInt(id)).map(pri => pri.quantity);
+    if(availableQuantity[0] >0){
     this.getFormArray().at(index).patchValue({ 'price': price[0] });
+    this.getFormArray().at(index).patchValue({ 'totalAmount': price[0] });
+    this.getFormArray().at(index).patchValue({ 'quantity':  1 });
     this.getFormArray().at(index).patchValue({ 'id': index + 1 });
     this.getFormArray().at(index).patchValue({ 'productId': id });
     let orderNumber = 10 * parseInt(id);
@@ -103,6 +106,7 @@ export class PlaceorderModuleComponent {
     this.getFormArray().at(index).patchValue({ 'customer': this.loginService.customerId });
     this.getFormArray().at(index).patchValue({ 'availableQuantity': availableQuantity[0] });
     this.getFormArray().at(index).patchValue({ 'status': 'pending' });
+  }
   }
 
   getFormArray() {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoginserviceService } from '../loginservice.service';
 
 @Component({
@@ -9,10 +9,12 @@ import { LoginserviceService } from '../loginservice.service';
 export class HeaderComponent {
 isLoggedIn=false;
   user: any;
+  @Input() isLogin=false;
 constructor(private login:LoginserviceService){
 
 }
 ngOnInit(){
+  alert(this.isLogin)
   this.isLoggedIn = this.login.isLoggedIn();
   
   this.login.subscribe((data:any) => {
