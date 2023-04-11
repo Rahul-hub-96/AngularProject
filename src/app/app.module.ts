@@ -14,8 +14,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { ProductModuleComponent } from './product-module/product-module.component';
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
-import { ProductServiceService } from './services/product-service.service';
 import { OrderModuleComponent } from './order-module/order-module.component';
+import { PlaceorderModuleComponent } from './placeorder-module/placeorder-module.component';
+import { ProductServiceService } from './services/product-service.service';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { WelcomeAdminComponent } from './welcome-admin/welcome-admin.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
+import { DummyFormsComponent } from './dummy-forms/dummy-forms.component';
+import { ViewProductComponent } from './view-product/view-product.component';
+import { OrderComponent } from './order/order.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 
@@ -23,14 +32,23 @@ import { OrderModuleComponent } from './order-module/order-module.component';
   declarations: [
     AppComponent,
     LoginComponent,
-  
+  RegistrationPageComponent,
    
     HeaderComponent,
     HomeComponent,
     SidebarComponent,
 	ProductModuleComponent,
     SupplierModuleComponent,
-    OrderModuleComponent
+    OrderModuleComponent,
+    PlaceorderModuleComponent,
+    AdminDashboardComponent,
+    WelcomeAdminComponent,
+    WelcomeUserComponent,
+    DummyFormsComponent,
+    ViewProductComponent,
+    OrderComponent,
+    UpdateProductComponent,
+    PlaceorderModuleComponent
     
   ],
   imports: [

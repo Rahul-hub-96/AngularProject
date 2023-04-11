@@ -4,6 +4,7 @@ import { ProductServiceService } from '../services/product-service.service';
 import { HttpClient } from '@angular/common/http';
 import {Product} from '../productforms/Product';
 import * as html2pdf from 'html2pdf.js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-module',
@@ -15,7 +16,7 @@ export class ProductModuleComponent implements OnInit  {
   prodser!:Product[];
   productForm: FormGroup= new FormGroup({});
 
-  constructor(private fb: FormBuilder, private ser:ProductServiceService,private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private ser:ProductServiceService,private http: HttpClient,private route:Router) { }
 
   ngOnInit(): void {
     this.productForm = this.fb.group({
@@ -24,8 +25,8 @@ export class ProductModuleComponent implements OnInit  {
       price: ['', Validators.required],
       quantity: ['', Validators.required],
       category: ['', Validators.required],
-      manufacturer: ['', Validators.required],
-      image: ['', Validators.required]
+      manufacturer: ['', Validators.required]
+     
     });
 
     this.ser.GetData().subscribe(list => {
@@ -43,7 +44,7 @@ export class ProductModuleComponent implements OnInit  {
     if (this.productForm.valid) {
       console.log(this.productForm.value);
       this.ser.Save(this.productForm.value).subscribe();
-      window.location.reload();
+      this.route.navigate(["/admin/getproduct"]);
     }
   }
 

@@ -6,17 +6,26 @@
                     <h2 style="text-align: center;">Login</h2>
                     <form [formGroup]="loginForm" (ngSubmit)="logIn()">
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <label for="exampleInputEmail1" class="form-label">Email address </label>
                           <input type="email" formControlName="email" class="form-control"  aria-describedby="emailHelp">
-                          
+                          <div style="color:red; margin-top: 5px;" *ngIf="loginForm.controls['email'].errors?.['required']">
+
+                            <span>Email is required</span>
+                           
+                            </div>
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" formControlName="password" class="form-control" >
+                          <label for="exampleInputPassword1" class="form-label">Password </label>
+                          <input type="password" formControlName="password1" class="form-control" >
+                          <div style="color:red; margin-top: 5px;" *ngIf="loginForm.controls['password1'].errors?.['required']">
+
+                            <span>Password is required</span>
+                           
+                            </div>
                         </div>
                        
-                        <button type="submit" class="btn btn-primary">Login</button><br>
-                        <a href="#">New User? Register Here!!</a>
+                        <button type="submit" class="button-33" role="button">Login</button><br>
+                        <a href="/register">New User? Register Here!!</a>
                       </form>
                
             </div>

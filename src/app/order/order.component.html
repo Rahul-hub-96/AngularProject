@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- <html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class='main'> -->
+  <div class='main'>
+<!-- <div class="container mt-1"> -->
+  <div style="clear: both">
+    <h3 class="h2">Order Details</h3>
+    <button type="button" [routerLink]="['/placeOrder']" style="float: right;color: #0a443d;
+    background-color: #B3F3DF;margin-right: 20px;" class="btn mr-0 ml-auto d-block"><b>Make an order</b></button>
+  </div>
+
+  <!-- <p>The .table-dark class adds a black background to the table:</p>    table-dark          -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Order Number</th>
+        <th>Product Id</th>
+        <th>Quantity</th>
+        <th>Amount</th>
+        <th>Total Amount</th>
+        <th>Available Quantity</th>
+        <th>Order status</th>
+        <th>Customer Id</th>
+      </tr>
+    </thead>
+   
+    <tbody *ngFor="let orders of orderData;let i=index;">
+      <tr *ngFor="let order of orders.placeOrdDetails;let j=index;">
+        <td>{{order.id}}</td>
+        <td>{{order.ordernumber}}</td>
+        <td>{{order.productId}}</td>
+        <td>{{order.quantity}}</td>
+        <td>{{order.price}}</td>
+        <td>{{order.totalAmount}}</td>
+        <td>{{order.availableQuantity}}</td>
+        <td>{{order.status}}</td>
+        <td>{{order.customer}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <span  class ='nod'[hidden]="noData">No Data</span>
+<!-- </div> -->
+</div>
+<!-- </body>
+</html> -->

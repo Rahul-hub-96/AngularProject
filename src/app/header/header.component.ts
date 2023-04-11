@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LoginserviceService } from '../loginservice.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isLoggedIn = false;
+  user:any;
+constructor(private login:LoginserviceService){
 
 }
+ngOnInit(): void {
+  
+}
+
+
+}
+

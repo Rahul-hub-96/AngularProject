@@ -1,100 +1,156 @@
 {
-  "user": [
-    {
-      "email": "yash@gmail.com",
-      "password": "pass",
-      "role": "Admin"
-    },
-    {
-      "email": "yash@g.com",
-      "password": "pass",
-      "role": "User"
-    }
-  ],
   "getProductData": [
-    {
-      "name": "One plus 9R",
-      "description": "oneplus mobile00",
-      "price": "50000",
-      "quantity": "10000",
-      "category": "Electronics",
-      "manufacturer": "Gada Electronics",
-      "image": "www.Gada_Electronics.com",
-      "id": 3,
-      "editing": true
-    },
     {
       "name": "RamSung TV",
       "description": "TV",
       "price": 40000,
-      "quantity": "5000",
+      "quantity": 83,
       "category": "electronics",
-      "manufacturer": "Gada Electronics",
-      "image": "www.Gada_Electronics.com",
-      "id": 4,
-      "editing": true
+      "manufacturer": "Gada Electronicss",
+      "id": 1
     },
     {
-      "name": "Raymond suit",
-      "description": "suit",
-      "price": 15000,
-      "quantity": 1,
-      "category": "clothing",
-      "manufacturer": "Raymond",
-      "image": "Raymond.com",
-      "id": 5
+      "name": "sony ",
+      "description": "TVv",
+      "price": 50000,
+      "quantity": 1993,
+      "category": "electronics",
+      "manufacturer": "Gada Electronicss",
+      "id": 2
+    },
+    {
+      "name": "laptop",
+      "description": "dell laptop",
+      "price": 50000,
+      "quantity": 199,
+      "category": "electronics",
+      "manufacturer": "dell",
+      "id": 3
     }
-  ],"showOrderDetails" : [
+  ],
+  "getSupplierData": [
+    {
+      "name": "Gada Electronics",
+      "contactname": "Jethalal champaklal gada",
+      "email": "jethalalGada_gada_Electronics@gmail.com",
+      "phone": 9876543211,
+      "address": "gokuldham society,goregaon east,mumbai",
+      "mode": "cheque",
+      "prefer": "heplicopter",
+      "id": 1,
+      "editing": true
+    }
+  ],
+  "getUserData": [
+    {
+      "username": "Devdatta Chilwant",
+      "email": "devdatta.chilwant@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Admin",
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password1": "admin",
+      "password2": "admin",
+      "usertype": "Admin",
+      "id": 2
+    },
+    {
+      "username": "user",
+      "email": "user@gmail.com",
+      "password1": "user",
+      "password2": "user",
+      "usertype": "Other",
+      "id": 3
+    },
+  {
+      "username": "Chilwant Devdatta",
+      "email": "chilwant@gmail.com",
+      "password1": "12",
+      "password2": "12",
+      "usertype": "Other",
+      "id": 4
+    }
+  ],
+  "showOrderDetails": [
     {
       "id": "1",
-      "productId":"1",
-      "noOfProduct":21,
-      "amount":23.20,
-      "status":"Pending",
-      "ordernum":339
-      
-    }, {
+      "productId": "1",
+      "noOfProduct": 21,
+      "amount": 23.2,
+      "status": "Pending",
+      "ordernum": 339
+    },
+    {
       "id": "2",
-      "productId":6,
-      "noOfProduct":20,
-      "amount":922.22,
-      "status":"Pending",
-      "ordernum":3432
-    }, {
+      "productId": 6,
+      "noOfProduct": 20,
+      "amount": 922.22,
+      "status": "Pending",
+      "ordernum": 3432
+    },
+    {
       "id": 3,
-      "productId":8,
-      "noOfProduct":15,
-      "amount":494,
-      "status":"Delivered",
-      "ordernum":3432
-    }, {
+      "productId": 8,
+      "noOfProduct": 15,
+      "amount": 494,
+      "status": "Delivered",
+      "ordernum": 3432
+    },
+    {
       "id": 4,
-      "productId":9,
-      "noOfProduct":9,
-      "amount":339,
-      "status":"To be Delivered",
-      "ordernum":3432
-    }, {
+      "productId": 9,
+      "noOfProduct": 9,
+      "amount": 339,
+      "status": "To be Delivered",
+      "ordernum": 3432
+    },
+    {
       "id": 5,
-      "productId":10,
-      "noOfProduct":4,
-      "amount":992.2,
-      "status":"Delivered",
-      "ordernum":3432
-    }, {
+      "productId": 10,
+      "noOfProduct": 4,
+      "amount": 992.2,
+      "status": "Delivered",
+      "ordernum": 3432
+    },
+    {
       "id": 6,
-      "productId":11,
-      "noOfProduct":3,
-      "amount":282,
-      "status":"Pending",
-      "ordernum":3432
-    }, {
+      "productId": 11,
+      "noOfProduct": 3,
+      "amount": 282,
+      "status": "Pending",
+      "ordernum": 3432
+    },
+    {
       "id": 7,
-      "productId":12,
-      "noOfProduct":5,
-      "amount":29292,
-      "status":"Delivered",
-      "ordernum":3432
+      "productId": 12,
+      "noOfProduct": 5,
+      "amount": 29292,
+      "status": "Delivered",
+      "ordernum": 3432
+    }
+  ],
+  "getOrderHistory": [
+    {
+      "placeOrdDetails": [
+        {
+          "id": 1,
+          "ordernumber": 20,
+          "productId": "2",
+          "customer": 3,
+          "category": "electronics",
+          "pname": "2",
+          "price": 50000,
+          "quantity": 1,
+          "totalAmount": 50000,
+          "availableQuantity": 1994,
+          "status": "pending"
+        }
+      ],
+      "id": 1
     }
   ]
 }

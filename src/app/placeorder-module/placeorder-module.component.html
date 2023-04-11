@@ -1,0 +1,76 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+<!-- <app-sidebar></app-sidebar> -->
+<div class="main" [formGroup]="placeOrderForm" (ngSubmit)="placeOrder()">
+    <!-- <tr style="float: left"> -->
+        <!-- <td > -->
+            <div class="clear: both">
+                <h3 style="display: inline-block;">Place Order</h3>
+                <input type="submit" class="btn" (click)="placeOrder()" 
+                  class="btn" 
+                value="Place Order" [disabled]="this.placeOrderForm.invalid"/> 
+                <!--  -->
+            <input type="button" (click)="addMoreRow()" class="btn "  value="Add Items">
+             <!-- <button type="submit" (click)="placeOrder()" class="btn" style=" color: 0a443d;
+             background-color: #B3F3DF" > <b>Place Order</b></button> -->
+            <!-- </td> -->
+        <!-- <td colspan="5"> -->
+            <!-- <input type="button" class="btn " style=" color: 0a443d;
+            background-color: #B3F3DF" (click)="placeOrder()" 
+            [disabled]="!this.placeOrderForm.get('placeOrdDetails')?.invalid"  class="btn btn-primary" 
+            value="Place Order" /> -->
+     
+    </div>
+        <!-- </td>   
+    </tr> -->
+    <table class="table"  formArrayName="placeOrdDetails">
+    <thead>
+        <tr>
+            <th>Product Categoy</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Total Amount</th>
+            <th>Delete Items</th>
+        </tr>
+    </thead>
+    <!-- <form >  placeOrderForm.controls['placeOrdDetails']?.value-->
+    <tbody>
+        <tr *ngFor="let plcOrder of getFormArray().controls;let i = index;" [formGroupName]="i">
+            <td class="col-sm-2"> 
+                <select name="selectedQuantity" formControlName="category" class="form-control" #cat  (change)="getProductByCategory(cat.value, i)">
+                        <option value="" disabled selected>Select Category</option>
+                        <option *ngFor="let category of products" [value]="category.category" >{{category.category}}</option>
+                    </select>
+                </td>
+                <td class="col-sm-2">
+                    <select name="selectedQuantity" formControlName="pname" class="form-control" #name (change)="getProductDetaisByName(name.value,i)">
+                            <option value="" disabled selected>Select Product</option>
+                            <option *ngFor="let pname of getProductByName(i)" [value]="pname.id" >{{pname.name}}</option>
+                        </select>
+                    </td>
+            <td class="col-sm-2">
+                <input type="text" formControlName="quantity" class="form-control" 
+                #quant (ngModelChange)="quantity(quant.value, i)" value="1"
+                pattern="^[1-9][0-9]*$" required oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value=''"/>
+               <!-- pattern="^[1-9][0-9]*$" required oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value=''; -->
+                <div *ngIf="getFormArray().at(i).get('quantity')?.errors">
+                <span style="color:red"> Quantity shoud not be  more than {{getFormArray().at(i).get('availableQuantity')?.value}}</span>
+          </div>  
+          <!-- getFormArray().at(i).get('quantity')?.errors -->
+            </td>
+            <td class="col-sm-2">
+                <input  type="text" formControlName="price" name="price" class="form-control" [readonly] = "disableSelect"/>
+            </td>
+            <td class="col-sm-2">
+                <input type="text" formControlName="totalAmount" name="totalAmount" class="form-control" [readonly] = "disableSelect"/>
+            </td>
+            <td (click)="deleteRow(i)">    
+                <i class="fa fa-trash fa-1x" style="color: red;" ></i>    
+              </td>  
+        </tr>
+    </tbody>
+</table>
+</div>
