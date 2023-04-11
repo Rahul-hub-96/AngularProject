@@ -1,0 +1,67 @@
+<html>
+  
+
+    
+
+<div class="container table-responsive"> 
+    <button routerLink="/admin/product" type="submit" class="button-33" role="button" style="margin-top: 8%;">Add New Product</button><br>
+
+  <h4>Product Details</h4>
+  <!-- <p>The .table-dark class adds a black background to the table:</p>             -->
+  <table class="table ">
+   <thead>
+            <tr  class="w-25">
+                <th class="w-75">Id</th>
+                <th class="w-75">Name</th>
+                <th class="w-75">Description</th>
+                <th class="w-75">Price</th>
+                <th class="w-75">Quantity</th>
+                <th class="w-75">Category</th>
+                <th class="w-75">Manufacturer</th>
+                <th class="w-75">Image URL</th>
+                <th class="w-75">Action</th>
+            </tr></thead>
+
+
+            <tbody *ngFor="let p of prodser">
+                <tr>
+               <!-- <td>
+                    <input type="text" [(ngModel)]="p.name" name="name" [disabled]="!p.editing" />
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="p.description" name="desc" [disabled]="!p.editing" />
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="p.price" name="price" [disabled]="!p.editing" />
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="p.quantity" name="quant" [disabled]="!p.editing" />
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="p.category" name="categ" [disabled]="!p.editing" />
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="p.manufacturer" name="manf" [disabled]="!p.editing" />
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="p.image" name="img" [disabled]="!p.editing" />
+                </td>-->
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.quantity}}</td>
+                <td>{{p.category}}</td>
+                <td>{{p.manufacturer}}</td>
+                <td>{{p.image}}</td>
+                <td>
+                    <a  [routerLink]="['/admin/updateprod/' +p.id]"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                    
+                    <i class="bi bi-trash"></i> <a (click)="deleteProduct(p)"><i class="fa fa-trash"></i> </a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+  
+    </html>

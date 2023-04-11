@@ -1,22 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../productforms/Product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductServiceService } from '../services/product-service.service';
 import { HttpClient } from '@angular/common/http';
-import {Product} from '../productforms/Product';
 import * as html2pdf from 'html2pdf.js';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-product-module',
-  templateUrl: './product-module.component.html',
-  styleUrls: ['./product-module.component.css']
+  selector: 'app-view-product',
+  templateUrl: './view-product.component.html',
+  styleUrls: ['./view-product.component.css']
 })
-export class ProductModuleComponent implements OnInit  {
-
+export class ViewProductComponent implements OnInit {
   prodser!:Product[];
   productForm: FormGroup= new FormGroup({});
 
-  constructor(private fb: FormBuilder, private ser:ProductServiceService,private http: HttpClient,private route:Router) { }
+  constructor(private fb: FormBuilder, private ser:ProductServiceService,private http: HttpClient) { }
 
   ngOnInit(): void {
     this.productForm = this.fb.group({
@@ -25,8 +23,8 @@ export class ProductModuleComponent implements OnInit  {
       price: ['', Validators.required],
       quantity: ['', Validators.required],
       category: ['', Validators.required],
-      manufacturer: ['', Validators.required]
-     
+      manufacturer: ['', Validators.required],
+      image: ['', Validators.required]
     });
 
     this.ser.GetData().subscribe(list => {
@@ -40,13 +38,6 @@ export class ProductModuleComponent implements OnInit  {
     });
   }
 
-  submit() {
-    if (this.productForm.valid) {
-      console.log(this.productForm.value);
-      this.ser.Save(this.productForm.value).subscribe();
-      this.route.navigate(["/admin/getproduct"]);
-    }
-  }
 
   editProduct(prod: Product) {
     prod.editing = true;

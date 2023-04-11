@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class SupplierService {
 
   constructor(public http:HttpClient) { }
-  url:String="http://localhost:3001"
+  url:String="http://localhost:3000"
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   Save(sup:Supplier){

@@ -1,0 +1,50 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+  <h4 class ='h2'>Product Details</h4>
+  <!-- <p>The .table-dark class adds a black background to the table:</p>             -->
+  <form *ngIf="prodser"(submit)="updateProduct(prodser)">
+    
+   <div class="mb-3">
+    <label  class="form-label">Id</label>
+   <input type="text"class="form-control" [(ngModel)]="prodser.id" name="id" />
+    </div>
+
+<div class="mb-3"> 
+    <label  class="form-label">Name</label>               
+<input type="text" [(ngModel)]="prodser.name" name="name" class="form-control" />
+</div>
+
+<div class="mb-3"> 
+    <label  class="form-label">Description</label>            
+ Description<input type="text" [(ngModel)]="prodser.description" class="form-control" name="desc"  />
+</div>
+
+ <div class="mb-3">
+    <label  class="form-label">Price</label> 
+<input type="text" [(ngModel)]="prodser.price" name="price" class="form-control"  />
+</div>
+
+<div class="mb-3">
+                <label  class="form-label">Quantity</label> 
+                    <input type="text" [(ngModel)]="prodser.quantity" name="quant" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Category</label> 
+               <input type="text" [(ngModel)]="prodser.category" name="categ" class="form-control" />
+               </div>
+               <div class="mb-3">
+                <label  class="form-label">Manufacturer</label> 
+               <input type="text" [(ngModel)]="prodser.manufacturer" name="manf" class="form-control"  />
+               </div>
+               <div class="mb-3">
+                <label  class="form-label">Image</label>                 
+                    <input type="text" [(ngModel)]="prodser.image" name="img"  class="form-control" /></div>
+                <button>Update</button>&nbsp;
+            
+    </form></div></div></div></div>
+   
+

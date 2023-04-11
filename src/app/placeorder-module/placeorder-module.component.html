@@ -57,7 +57,7 @@
                 pattern="^[1-9][0-9]*$" required oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value=''"/>
                <!-- pattern="^[1-9][0-9]*$" required oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value=''; -->
                 <div *ngIf="getFormArray().at(i).get('quantity')?.errors">
-                <span style="color:red"> Quantity shoud not be more than {{getFormArray().at(i).get('availableQuantity')?.value}}</span>
+                <span style="color:red"> Quantity shoud not be  more than {{getFormArray().at(i).get('availableQuantity')?.value}}</span>
           </div>  
           <!-- getFormArray().at(i).get('quantity')?.errors -->
             </td>

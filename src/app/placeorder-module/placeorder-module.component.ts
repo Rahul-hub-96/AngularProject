@@ -1,12 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { PlaceOrderGrid } from './model/PlaceOrderGrid';
-import { ProductServiceService } from '../services/product-service.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from '../productforms/Product';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { PlaceorderserviceService } from '../placeorderservice.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { LoginserviceService } from '../loginservice.service';
-import { SharedServiceService } from '../services/shared-service.service';
+import { ProductServiceService } from '../services/product-service.service';
+import { PlaceorderserviceService } from '../services/placeorderservice.service';
+import { PlaceOrderGrid } from '../model/PlaceOrderGrid';
+
 
 @Component({
   selector: 'app-placeorder-module',
@@ -100,6 +100,8 @@ export class PlaceorderModuleComponent {
     this.getFormArray().at(index).patchValue({ 'totalAmount': price[0] });
     this.getFormArray().at(index).patchValue({ 'quantity':  1 });
     this.getFormArray().at(index).patchValue({ 'id': index + 1 });
+    this.getFormArray().at(index).patchValue({ 'price': price[0] });
+    this.getFormArray().at(index).patchValue({ 'id': index + 1 });
     this.getFormArray().at(index).patchValue({ 'productId': id });
     let orderNumber = 10 * parseInt(id);
     this.getFormArray().at(index).patchValue({ 'ordernumber': orderNumber });
@@ -107,7 +109,7 @@ export class PlaceorderModuleComponent {
     this.getFormArray().at(index).patchValue({ 'availableQuantity': availableQuantity[0] });
     this.getFormArray().at(index).patchValue({ 'status': 'pending' });
   }
-  }
+}
 
   getFormArray() {
     return this.placeOrderForm.get('placeOrdDetails') as FormArray;

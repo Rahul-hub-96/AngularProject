@@ -22,6 +22,9 @@ import { WelcomeAdminComponent } from './welcome-admin/welcome-admin.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
 import { DummyFormsComponent } from './dummy-forms/dummy-forms.component';
+import { ViewProductComponent } from './view-product/view-product.component';
+import { OrderComponent } from './order/order.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 
@@ -41,7 +44,11 @@ import { DummyFormsComponent } from './dummy-forms/dummy-forms.component';
     AdminDashboardComponent,
     WelcomeAdminComponent,
     WelcomeUserComponent,
-    DummyFormsComponent
+    DummyFormsComponent,
+    ViewProductComponent,
+    OrderComponent,
+    UpdateProductComponent,
+    PlaceorderModuleComponent
     
   ],
   imports: [
