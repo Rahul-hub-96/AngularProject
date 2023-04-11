@@ -70,7 +70,7 @@
       "usertype": "Other",
       "id": 3
     },
-    {
+  {
       "username": "Chilwant Devdatta",
       "email": "chilwant@gmail.com",
       "password1": "12",
@@ -197,7 +197,7 @@
           "id": 1,
           "ordernumber": 40,
           "productId": "4",
-          "customer": 4,
+        "customer": 4,
           "category": "electronics",
           "pname": "4",
           "price": 40000,
